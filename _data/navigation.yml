@@ -1,22 +1,14 @@
-- name: Pricing
-  link: /pricing/
+- name: Documentation
+  link: /documentation/
+  new_window: false
+  highlight: false
+- name: Forum
+  link: /forum/
   new_window: false
   highlight: false
 - name: Blog
   link: /blog/
   new_window: false
-  highlight: false
-- name: About
-  link: /about/
-  new_window: false
-  highlight: false
-- name: Contact
-  link: /contact/
-  new_window: false
-  highlight: false
-- name: Login
-  link: /
-  new_window: true
   highlight: false
 - name: "<i class='fab fa-github'></i> GitHub"
   link: https://github.com/korlibs/korge
