@@ -1,24 +1,22 @@
 - links:
-  - name: Pricing
-    link: /pricing/
+  - name: Documentation
+    link: https://korlibs.soywiz.com/
+  - name: Forum
+    link: https://forum.soywiz.com/
   - name: Blog
-    link: /blog/
-  - name: About
-    link: /about/
-  - name: Contact
-    link: /contact/
+    link: https://soywiz.com/tag/korlibs/
 - links:
-  - name: Login
-    link: /
+  - name: Klock
+    link: https://github.com/korlibs/klock/
     new_window: true
-  - name: Sign Up
-    link: /
+  - name: Korio
+    link: https://github.com/korlibs/korio/
     new_window: true
-  - name: Docs
-    link: /
+  - name: Korim
+    link: https://github.com/korlibs/korim/
     new_window: true
-  - name: Status
-    link: /
+  - name: Korau
+    link: https://github.com/korlibs/korau/
     new_window: true
 - links:
   - name: Facebook
