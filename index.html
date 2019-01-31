@@ -9,16 +9,25 @@ document.addEventListener('DOMContentLoaded', function() {
   KotlinPlayground('.code-blocks-selector');
 });
 </script>
+<style type="text/css">
+.executable-fragment-wrapper {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+</style>
 
 <section class="hero">
 	<div class="text-container" style="max-width: unset;">
 		<h1 class="editable">Modern Multiplatform Game Engine <strong>for Kotlin</strong></h1>
 		<p class="subtext editable">Write games for the JVM, JavaScript, Android and iOS in no time using Kotlin.</p>
-		<div class="cta button alt"><a href="/samples/korge-hello-world.zip">Download Gradle Template</a></div>
+		<div class="cta button alt">
+			<a href="/samples/korge-hello-world.zip">
+				<i class="fas fa-download"></i> Download Project Template
+			</a>
+		</div>
 		<div>
 			<div class="container flex">
 				<div class="text editable">
-						<iframe src="/samples/korge-hello-world/index.html" style="height:408px;max-width:100%;border:1px solid #777;"></iframe>
+						<iframe src="/samples/korge-hello-world/index.html" style="height:408px;max-width:100%;border:1px solid #777;box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);"></iframe>
 				</div>
 				<div class="text editable" style="text-align:left !important;margin-top:15px;">
 <code class="code-blocks-selector" from="11" to="34" data-lines="true" theme="darcula" data-highlight-only output-height="200">
