@@ -47,4 +47,8 @@
 <url>
 <loc>http://localhost:4000/category/marketing/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/samples/korge-hello-world/</loc>
+<lastmod>2019-01-31T15:05:13+00:00</lastmod>
+</url>
 </urlset>

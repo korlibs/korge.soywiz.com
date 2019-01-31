@@ -1,14 +1,65 @@
 ---
-title: The last sales CRM you'll ever need
+title: Korge Game Engine
 description: Track and optimize your sales team in real time
 ---
+<script src="https://unpkg.com/kotlin-playground@1"></script>
+				 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  KotlinPlayground('.code-blocks-selector');
+});
+</script>
+
 <section class="hero">
-	<div class="text-container">
-		<h1 class="editable">The last sales CRM <strong>you'll ever need</strong></h1>
-		<p class="subtext editable">Track and optimize your sales team in real time.</p>
-		<div class="cta button alt"><a href="/sign-up/">Get Started Free</a></div>
+	<div class="text-container" style="max-width: unset;">
+		<h1 class="editable">Modern Multiplatform Game Engine <strong>for Kotlin</strong></h1>
+		<p class="subtext editable">Write games for the JVM, JavaScript, Android and iOS in no time using Kotlin.</p>
+		<div class="cta button alt"><a href="/samples/korge-hello-world.zip">Download Gradle Template</a></div>
 		<div>
-			<img src="/images/dashboard.png" alt="Screenshot" class="screenshot editable" />
+			<div class="container flex">
+				<div class="text editable">
+						<iframe src="/samples/korge-hello-world/index.html" style="width: 410px;height:410px;"></iframe>
+				</div>
+				<div class="text editable" style="text-align:left !important;margin-top:15px;">
+<code class="code-blocks-selector" from="11" to="34" data-lines="true" theme="darcula" data-highlight-only output-height="200">
+import com.soywiz.klock.seconds
+import com.soywiz.korge.*
+import com.soywiz.korge.tween.*
+import com.soywiz.korge.view.*
+import com.soywiz.korim.format.*
+import com.soywiz.korio.async.*
+import com.soywiz.korio.file.std.*
+import com.soywiz.korma.geom.*
+import com.soywiz.korma.interpolation.*
+
+suspend fun main() = Korge(width = 512, height = 512) {
+	val minAngle = (-16).degrees
+	val maxAngle = (+16).degrees
+
+	val image = image(resourcesVfs["korge.png"].readBitmap()) {
+		rotation = maxAngle
+		anchor(.5, .5)
+		scale(.8)
+		position(256, 256)
+	}
+
+	launchImmediately {
+		while (true) {
+			image.tween(
+				image::rotation[minAngle],
+				time = 1.seconds, easing = Easing.EASE_IN_OUT
+			)
+			image.tween(
+				image::rotation[maxAngle],
+				time = 1.seconds, easing = Easing.EASE_IN_OUT
+			)
+		}
+	}
+}
+</code>
+				</div>
+			</div>
+				
 		</div>
 	</div>
 </section>

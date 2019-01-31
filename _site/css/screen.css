@@ -50,7 +50,7 @@ p, address {
   line-height: 1.4em; }
 
 .bottom-cta {
-  background: linear-gradient(to bottom, #4182e4 0%, #4182e4 100%);
+  background: linear-gradient(to bottom, #886eb1 0%, #876db0 100%);
   color: #fff;
   text-align: center;
   margin: 0;
@@ -80,7 +80,7 @@ p, address {
 .hero {
   color: #ffffff;
   text-align: center;
-  background: linear-gradient(to bottom, #4182e4 0%, #4182e4 100%) no-repeat #a05fb7;
+  background: linear-gradient(to bottom, #876db0 0%, #745f99 100%) no-repeat #a05fb7;
   padding-top: 50px; }
   .hero p {
     color: #fff; }
@@ -118,9 +118,9 @@ p, address {
 header {
   color: #fff;
   padding: 20px 0;
-  background: #4182e4;
+  background: #886eb1;
   /* Old browsers */
-  background: linear-gradient(to bottom, #4182e4 0%, #4182e4 100%) no-repeat #4182e4; }
+  background: linear-gradient(to bottom, #886eb1 0%, #876db0 100%) no-repeat #886eb1; }
   header a {
     color: #fff;
     text-decoration: none;
@@ -444,14 +444,14 @@ blockquote:before {
   color: #fff;
   text-decoration: none;
   padding: 10px 30px;
-  background: #4182e4;
+  background: #886eb1;
   border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   transition: .2s ease-in-out; }
 
 .button a:hover, input[type=submit]:hover {
   border: 1px solid #fff;
-  background: #4182e4;
+  background: #745f99;
   cursor: pointer; }
 
 .button.alt a {
@@ -462,7 +462,7 @@ blockquote:before {
 
 .button.alt a:hover {
   background: #fff;
-  color: #4182e4; }
+  color: #886eb1; }
 
 textarea, input, button, select {
   font-family: inherit;
@@ -554,7 +554,7 @@ nav {
       border-radius: 5px; }
       nav a.highlight:hover {
         background: #fff;
-        color: #4182e4; } }
+        color: #886eb1; } }
   nav a.active {
     color: #fff; }
 
