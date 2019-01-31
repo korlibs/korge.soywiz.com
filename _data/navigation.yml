@@ -1,13 +1,13 @@
 - name: Documentation
-  link: /documentation/
+  link: https://korlibs.soywiz.com/
   new_window: false
   highlight: false
 - name: Forum
-  link: /forum/
+  link: https://forum.soywiz.com/
   new_window: false
   highlight: false
 - name: Blog
-  link: /blog/
+  link: https://soywiz.com/tag/korlibs/
   new_window: false
   highlight: false
 - name: "<i class='fab fa-github'></i> GitHub"

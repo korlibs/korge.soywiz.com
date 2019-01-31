@@ -95,6 +95,10 @@ suspend fun main() = Korge(width = 512, height = 512) {
 					You can create small native games or games for the web,
 					that are fast to download and require almost no space to store.
 				</p>
+				<p>
+					The JS sample of this page is just 383 KB gzipped (<em>1.9 MB uncompressed</em>).
+					No emscripten. Just plain JS generated using Kotlin/JS.
+				</p>
 			</div>
 			<div class="image">
 				<img src="/images/small.svg" alt="Screenshot" class="screenshot editable" />
@@ -105,29 +109,64 @@ suspend fun main() = Korge(width = 512, height = 512) {
 	<section>
 		<div class="container flex">
 			<div class="text editable">
-				<h2>How can I <strong>forecast</strong> the next 90 days?</h2>
-				<p>Hydra learns your business. By analyzing your sales data, Hydra optimizes your sales process and show you where you should be spending your resources.</p>
+				<h2>Iterate <strong>fast</strong>, develop with pleasure</h2>
+				<p>
+					Since KorGE targets the JVM, you can develop your game,
+					try it, debug it and test it using IntelliJ IDEA (<em>including Community, Ultimate and Android Studio</em>) integrated
+					debugger. And then deploy to the other targets by using the
+					provided gradle tasks.
+				</p>
+				<p>
+					You can also use KorGE as a library and for example integrated
+					it in your android-only project.
+				</p>
 			</div>
 			<div class="image">
-				<img src="/images/dashboard.png" alt="Screenshot" class="screenshot editable" />
+				<img src="/images/idea.png" alt="Screenshot" class="screenshot editable" />
 			</div>
 		</div>
 	</section>
 
+	<section>
+			<div class="container flex">
+				<div class="text editable">
+					<h2>Tons of <strong>features</strong> out of the box</h2>
+					<p>
+						KorGE is just the last layer of a larger stack (Korlibs) for multimedia development:
+					</p>
+					<p>
+						Date and Time utilities, Image Loading, Vector Rasterization, Pathfinding, Sound, Data Structures, Fast Memory Access,
+						Virtual File Systems, WebSockets...	
+					</p>
+					<p>
+						Also, it is extensible and include several plugins out of the box:
+						DragonBones, Box2D, SWF and Admob. And more coming.
+					</p>
+				</div>
+				<div class="image">
+					<img src="/images/libraries/libraries.png" alt="Screenshot" class="screenshot editable" />
+				</div>
+			</div>
+		</section>
+	
 	<section class="testimonial">
 		<div class="container flex">
 			<div class="testimonial-block">
-				<div class="square-image"><img src="https://source.unsplash.com/6anudmpILw4/600x400" alt="Jim James" class="editable"></div>
+				<div class="square-image"><img src="https://avatars2.githubusercontent.com/u/570848?s=460&v=4" alt="Carlos Ballesteros" class="editable" style="width:inherit;"></div>
 				<blockquote>
-					<p class="editable">Hydra has shaped the business we have today. We have a repeatable sales process and a strategy to scale our team. I recommend Hydra to any business looking to improve their sales.</p>
-					<p class="editable author">Jim James - CEO of Global Corp.</p>
+					<p class="editable">KorGE is the result of two years of intense development. It is totally free and OpenSource. Hope you all enjoy it.</p>
+					<p class="editable author">Carlos Ballesteros Velasco (soywiz) - Creator of KorGE</p>
 				</blockquote>
 			</div>
 		</div>
 	</section>
 
 	<section class="bottom-cta">
-		<h2 class="editable"><strong>Improve</strong> your sales process today</h2>
-		<div class="button alt"><a href="#">Get Started Free</a></div>
+		<h2 class="editable"><strong>Try</strong> KorGE today</h2>
+		<div class="button alt">
+			<a href="/samples/korge-hello-world.zip">
+				<i class="fas fa-download"></i> Download Project Template
+			</a>
+		</div>
 	</section>
 </div>
