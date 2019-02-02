@@ -74,7 +74,7 @@ jekyll-archives:
     - categories
 
 plugins:
-  - jekyll-archives
+#  - jekyll-archives
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
