@@ -37,6 +37,7 @@ description: Modern Multiplatform Game Engine written in Kotlin
 					<div id="editor"></div>
 				</div>
 			</div>
+			<a id="sample-link" href="about:blank" target="_blank">Sample</a>
 			<div class="container flex">
 				<nav id="samples">
 					<a href="javascript:void(0)" data-sample="korge-hello-world" class="active">Hello World</a>
@@ -62,6 +63,8 @@ description: Modern Multiplatform Game Engine written in Kotlin
 				editor.setReadOnly(true);
 
 				async function setSample(name) {
+					$('#sample-link').text(`/samples/${name}/index.html`);
+					$('#sample-link').attr('href', `/samples/${name}/index.html`);
 					$('#sample-preview').attr('src', `/samples/${name}/index.html`);
 					let req = await fetch(`/samples/${name}.kt`);
 					let text = await req.text();
@@ -91,6 +94,8 @@ description: Modern Multiplatform Game Engine written in Kotlin
 				}
 
 				setSample("korge-hello-world");
+
+				document.addEventListener('touchstart', {});
 
 				let sampleLinks = document.querySelectorAll('a[data-sample]');
 				sampleLinks.forEach((link) => {

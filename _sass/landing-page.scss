@@ -74,7 +74,14 @@ nav#samples a {
     display: inline-block;
 }
 
+#sample-link {
+    display: none;
+}
+
 @media (max-width: 767px) {
+    #sample-link {
+        display: block;
+    }
     #editor {
         display: none;
     }
