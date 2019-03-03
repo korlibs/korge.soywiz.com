@@ -9,11 +9,43 @@
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+		<script src="/js/jquery-3.3.1.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<header>
 			<div class="container">
-				<div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="KorGE Logo" width="95" height="33" /></a></div>
+				<div class="company-name">
+					<a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="KorGE Logo" width="95" height="33" /></a>
+					<span id="version"></span>
+
+					<script type="text/javascript">
+						function updateVersion() {
+							let version = localStorage.getItem('version');
+							let rversion = (version == 'vundefined' || version == 'undefined') ? 'v1.0.0' : (version || 'v1.0.0');
+							document.getElementById('version').innerText = `${rversion}`;
+						}
+
+						updateVersion();
+
+						async function fetchJson(url) {
+							let data = await fetch(url);
+							let json = await data.json();
+							return json;
+						}
+
+						async function doDynamic() {
+							let versionCacheTime = localStorage.getItem('versionCacheTime');
+							if (!versionCacheTime || ((Date.now() - versionCacheTime) > 24 * 3600 * 1000)) {
+								let data = await fetchJson("https://api.github.com/repos/korlibs/korge/releases/latest");
+								console.log(data);
+								localStorage.setItem('versionCacheTime', Date.now());
+								localStorage.setItem('version', 'v' + data.tag_name);
+								updateVersion();
+							}
+						}
+						doDynamic();
+					</script>
+				</div>
 				{% include navigation.html %}
 			</div>
 		</header>

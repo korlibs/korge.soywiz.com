@@ -81,6 +81,8 @@ plugins:
   - jekyll-paginate
 
 exclude:
+  - .idea
+  - .sass-cache
   - Gemfile
   - Gemfile.lock
   - README.md

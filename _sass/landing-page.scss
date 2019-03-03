@@ -60,3 +60,13 @@
 		flex-direction: row-reverse;
 	}
 }
+
+nav#samples a {
+    text-decoration: none !important;
+    line-height: 2.5em;
+}
+
+nav#samples a.active {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
