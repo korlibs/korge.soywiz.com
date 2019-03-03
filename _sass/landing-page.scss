@@ -70,3 +70,12 @@ nav#samples a.active {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
 }
+nav#samples a {
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    #editor {
+        display: none;
+    }
+}
