@@ -1,16 +1,25 @@
 - name: Documentation
   link: https://korlibs.soywiz.com/korge/
-  new_window: false
+  icon: fa fa-book
+  new_window: true
   highlight: false
 - name: Forum
   link: https://forum.soywiz.com/
-  new_window: false
+  icon: fa fa-comments
+  new_window: true
+  highlight: false
+- name: Slack
+  link: https://slack.soywiz.com/
+  icon: fab fa-slack
+  new_window: true
   highlight: false
 - name: Blog
   link: https://soywiz.com/tag/korlibs/
-  new_window: false
+  icon: fab fa-wordpress
+  new_window: true
   highlight: false
-- name: "<i class='fab fa-github'></i> GitHub"
+- name: GitHub
+  icon: fab fa-github
   link: https://github.com/korlibs/korge
   new_window: true
   highlight: true
