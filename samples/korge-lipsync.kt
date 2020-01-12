@@ -16,12 +16,10 @@ suspend fun main() = Korge {
             lips2.texture = atlas["lisa-${it.lip}.png"].texture
         }
     }
-    launchImmediately {
-        fun handler(it: LipSyncEvent) {
-            views.dispatch(it)
-            lips.texture = atlas["lisa-${it.lip}.png"].texture
-        }
-
-        resourcesVfs["001.voice.wav"].readVoice().play("lisa") { handler(it) }
+    fun handler(it: LipSyncEvent) {
+        views.dispatch(it)
+        lips.texture = atlas["lisa-${it.lip}.png"].texture
     }
+
+    resourcesVfs["001.voice.wav"].readVoice().play("lisa") { handler(it) }
 }

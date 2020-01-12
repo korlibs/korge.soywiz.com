@@ -19,16 +19,14 @@ suspend fun main() = Korge(width = 512, height = 512) {
         position(256, 256)
     }
 
-    launchImmediately {
-        while (true) {
-            image.tween(
-                    image::rotation[minAngle],
-                    time = 1.seconds, easing = Easing.EASE_IN_OUT
-            )
-            image.tween(
-                    image::rotation[maxAngle],
-                    time = 1.seconds, easing = Easing.EASE_IN_OUT
-            )
-        }
+    while (true) {
+        image.tween(
+                image::rotation[minAngle],
+                time = 1.seconds, easing = Easing.EASE_IN_OUT
+        )
+        image.tween(
+                image::rotation[maxAngle],
+                time = 1.seconds, easing = Easing.EASE_IN_OUT
+        )
     }
 }
