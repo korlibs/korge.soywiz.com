@@ -19,9 +19,13 @@
 					<span id="version"></span>
 
 					<script type="text/javascript">
+						const versionVersion = "V1"
+						const versionTimeLocalStorageKey = `versionCacheTime${versionVersion}`;
+						const versionLocalStorageKey = `version${versionVersion}`;
+
 						function updateVersion() {
-							let version = localStorage.getItem('version');
-							let rversion = (version == 'vundefined' || version == 'undefined') ? 'v1.0.0' : (version || 'v1.0.0');
+							let version = localStorage.getItem(versionLocalStorageKey);
+							let rversion = (version == 'vundefined' || version == 'undefined') ? 'v1.5.6.2' : (version || 'v1.5.6.2');
 							document.getElementById('version').innerText = `${rversion}`;
 						}
 
@@ -34,13 +38,22 @@
 						}
 
 						async function doDynamic() {
-							let versionCacheTime = localStorage.getItem('versionCacheTime');
+							let versionCacheTime = localStorage.getItem(versionTimeLocalStorageKey);
 							if (!versionCacheTime || ((Date.now() - versionCacheTime) > 24 * 3600 * 1000)) {
-								let data = await fetchJson("https://api.github.com/repos/korlibs/korge/releases/latest");
-								console.log(data);
-								localStorage.setItem('versionCacheTime', Date.now());
-								localStorage.setItem('version', 'v' + data.tag_name);
-								updateVersion();
+
+								try {
+									let data = await fetchJson("https://korlibs-api.soywiz.com/versions/korge-plugins");
+									console.log(data);
+									localStorage.setItem(versionTimeLocalStorageKey, Date.now());
+									localStorage.setItem(versionLocalStorageKey, 'v' + data.version.replace(/^release-/, ''));
+									updateVersion();
+								} catch (e) {
+									let data = await fetchJson("https://api.github.com/repos/korlibs/korge-plugins/releases/latest");
+									console.log(data);
+									localStorage.setItem(versionTimeLocalStorageKey, Date.now());
+									localStorage.setItem(versionLocalStorageKey, 'v' + data.tag_name.replace(/^release-/, ''));
+									updateVersion();
+								}
 							}
 						}
 						doDynamic();
