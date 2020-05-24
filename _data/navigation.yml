@@ -1,21 +1,21 @@
+- name: Blog
+  link: https://blog.korge.soywiz.com/
+  icon: fab fa-wordpress
+  new_window: true
+  highlight: false
+- name: SW Blog
+  link: https://soywiz.com/
+  icon: fab fa-wordpress
+  new_window: true
+  highlight: false
 - name: Documentation
   link: https://korlibs.soywiz.com/korge/
   icon: fa fa-book
   new_window: true
   highlight: false
-- name: Forum
-  link: https://forum.soywiz.com/
-  icon: fa fa-comments
-  new_window: true
-  highlight: false
 - name: Slack
   link: https://slack.soywiz.com/
   icon: fab fa-slack
-  new_window: true
-  highlight: false
-- name: Blog
-  link: https://soywiz.com/tag/korlibs/
-  icon: fab fa-wordpress
   new_window: true
   highlight: false
 - name: GitHub
