@@ -1,9 +1,0 @@
-apply plugin: 'idea'
-
-idea {
-    module {
-        excludeDirs += file('.idea')
-        excludeDirs += file('.sass-cache')
-        excludeDirs += file('_site')
-    }
-}
